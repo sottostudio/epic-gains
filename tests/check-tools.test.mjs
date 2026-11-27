@@ -6,7 +6,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
 
-const script = fileURLToPath(new URL('../scripts/check-tools.mjs', import.meta.url));
+const script = fileURLToPath(new URL('../plugins/workflow/scripts/check-tools.mjs', import.meta.url));
 const runWithPath = (searchPath, ...args) => spawnSync(process.execPath, [script, ...args], {
   encoding: 'utf8',
   env: { ...process.env, PATH: searchPath },

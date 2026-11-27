@@ -18,4 +18,8 @@ Use only necessary information. Never include secrets, private customer data, or
 | [Handoff](handoff.md) | Transfer state and the next safe action |
 | [Session brief](session-brief.md), [board](session-board.md) | Coordinate product-owned branch sessions |
 | [Agent assignment](agent-assignment.md), [result](agent-result.md) | Bound work and report verified evidence |
+| [Plan ledger](plan-ledger.md) | Track task baselines, independent reviews, decisions and recovery |
+| [Project charter](project-charter.md), [branch map](branch-map.md), [release checklist](release-checklist.md) | Set up and operate a new SaaS project |
+| [Setup record](setup-record.md) | Record approved, non-secret setup and suppress the startup reminder |
+| [Claude settings example](claude-settings.example.json) | Opt-in session and subagent model aliases; verify versions and overrides before use |
 | [Change](change-issue.md), [bug](bug-issue.md), [PR](pull-request.md) | Describe one actionable repository change |

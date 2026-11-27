@@ -1,6 +1,6 @@
 # Development toolbox
 
-Tools are optional capabilities, not assumed installations or authenticated connections. Run `node scripts/check-tools.mjs --profile all` to inspect executable availability locally without running the tools, making network requests, or reading credentials. Use `--json` for machine-readable output; `--profile core` or another named profile limits the check. Executable presence does not verify version, authentication, permissions, project selection, or functionality.
+Tools are optional capabilities, not assumed installations or authenticated connections. From the plugin directory, run `node scripts/check-tools.mjs --profile all` to inspect executable availability locally without running the tools, making network requests, or reading credentials. Use `--json` for machine-readable output; `--profile core` or another named profile limits the check. Executable presence does not verify version, authentication, permissions, project selection, or functionality.
 
 | Profile | Tools | Typical workflow |
 | --- | --- | --- |
@@ -16,5 +16,16 @@ Tools are optional capabilities, not assumed installations or authenticated conn
 Before using a tool, check the project-specific version and documented commands. Never silently install or upgrade it. Confirm license, cost, data handling and permissions before using hosted AI or research services; do not send private source, credentials, or customer data to an external tool without the applicable authorization and policy. A second opinion is information, not approval. Never use blanket permission-bypass flags as a shortcut.
 
 Use LSP or a current local code graph where available, and fall back to targeted search. Only trust graph results for the revision they represent. Limit context and output without masking errors or exit status; run required full checks when selective coverage is uncertain. Time and optimize actual bottlenecks rather than assuming savings.
+
+For Graphify, check `graphify --help` and inspect the graph's recorded source revision and generation settings before use. `graphify query "..." --graph <local-graph> --budget 1000` and `graphify explain "..." --graph <local-graph>` can explore an existing graph; verify important findings in source files. A missing or stale graph is not current evidence. Building or updating a graph writes files and may invoke a model depending on the workflow; check the actual command, storage, data handling and permissions before doing so. Never upload private code to external services.
+
+For a local code-only snapshot, run the following from the source project after reviewing its scope and selecting a private output directory outside any read-only reference checkout:
+
+```sh
+graphify extract . --code-only --no-cluster --out <private-output-directory>
+graphify query "symbol or file name" --graph <private-output-directory>/graphify-out/graph.json
+```
+
+Check `graphify --help` for the installed version first. Record the source commit, dirty state, tool version and extraction settings alongside the graph; rebuild and recheck when the source changes. The code-only graph omits Markdown, Notion and other non-code sources, so supplement it with direct source reads. Graphs and their caches can contain sensitive project details; keep them private and out of commits unless explicitly approved. This does not install Git or Claude hooks, modify service settings, or enable automatic refresh.
 
 For service setup and authorization see [connections](connections.md). For plugin and session capabilities see [plugin](plugin.md) and [session orchestration](session-orchestration.md). Tool availability and external integrations are not verified by this document.
