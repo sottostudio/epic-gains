@@ -1,0 +1,14 @@
+{
+  "name": "epic-gains",
+  "description": "Portable AI coding workflow plugins",
+  "owner": {
+    "name": "Epic Gains"
+  },
+  "plugins": [
+    {
+      "name": "workflow",
+      "source": "./plugins/workflow",
+      "description": "Portable coding, review, and handoff workflow"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "workflow",
+  "description": "Portable coding, review, and handoff workflow for Claude Code",
+  "author": {
+    "name": "Epic Gains"
+  }
+}
