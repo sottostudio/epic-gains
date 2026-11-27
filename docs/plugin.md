@@ -15,10 +15,16 @@ The repository is a local marketplace; `plugins/workflow` is a Claude Code plugi
 | `/workflow:lane-charter` | Establish a bounded session or branch charter |
 | `/workflow:review-digest` | Summarize unresolved PR review threads |
 | `/workflow:workflow-status` | Produce a read-only status digest |
+| `/workflow:head-session` | Coordinate product sessions and integration |
+| `/workflow:product-session` | Run an assigned product lane |
+| `/workflow:agent-workflow` | Coordinate bounded agents within a session |
+| `/workflow:plan-work` | Plan outcomes, dependencies, and checks |
+| `/workflow:finish-branch` | Verify a branch before authorized integration |
+| `/workflow:toolbox` | Check required tools and connection boundaries |
 | `/workflow:review` | Review a change without editing it |
 | `/workflow:handoff` | Summarize the state and next safe action |
 
-Claude may use the focused reviewer, security reviewer, gate doctor, and researcher agents when asked or when appropriate. Tool permissions and the host's approval rules still apply.
+Claude may use the focused reviewer, security reviewer, migration reviewer, gate doctor, researcher, planner, issue triage, operations observer, and PR conductor agents when asked or when appropriate. Tool permissions and the host's approval rules still apply.
 
 The charter, review digest, handoff and status skills adapt the behavior of custom desktop mods to portable text workflows. Their original dashboard, alert rail, automatic session hooks and persistent baton storage require a separate custom desktop runtime and are not included or emulated by this Claude Code plugin.
 

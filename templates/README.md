@@ -16,4 +16,6 @@ Use only necessary information. Never include secrets, private customer data, or
 | [Weekly status](weekly-status.md) | Summarize verified progress and blockers |
 | [AI task](ai-task.md) | Scope an agent task and its write permissions |
 | [Handoff](handoff.md) | Transfer state and the next safe action |
+| [Session brief](session-brief.md), [board](session-board.md) | Coordinate product-owned branch sessions |
+| [Agent assignment](agent-assignment.md), [result](agent-result.md) | Bound work and report verified evidence |
 | [Change](change-issue.md), [bug](bug-issue.md), [PR](pull-request.md) | Describe one actionable repository change |
